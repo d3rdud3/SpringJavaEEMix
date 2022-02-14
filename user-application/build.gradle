@@ -1,0 +1,17 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.3'
+	id 'war'
+}
+
+dependencies {
+	implementation project(':user')
+	implementation project(':user-impl')
+	implementation project(':user-rest-adapter')
+	implementation project(':user-persistence-adapter')
+//	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+}

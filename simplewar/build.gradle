@@ -1,0 +1,8 @@
+plugins {
+	id 'java'
+	id 'war'
+}
+
+dependencies {
+	compileOnly 'javax:javaee-api:7.0'
+}

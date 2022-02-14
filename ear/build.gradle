@@ -1,0 +1,16 @@
+plugins {
+    id 'ear'
+    id 'java'
+}
+
+dependencies {
+	implementation project(':billing-application')
+	implementation project(':order-application')
+	implementation project(':user-application')
+	implementation project(':simplewar')
+
+	deploy project(path: ':billing-application', configuration: 'archives')
+	deploy project(path: ':order-application', configuration: 'archives')
+	deploy project(path: ':user-application', configuration: 'archives')
+	deploy project(path: ':simplewar', configuration: 'archives')
+}
